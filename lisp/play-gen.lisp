@@ -10,7 +10,7 @@
 
 (defparameter acc1 (make-acc '((p 2 5)(q 1 20)(r 3 5))))
 
-(choose-symbol acc1)  ;; p and q with 1:4
+(choose-symbol acc1)  ;; p, q and r with 1:4:1
 
 
 
