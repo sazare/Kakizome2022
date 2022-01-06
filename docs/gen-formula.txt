@@ -1,4 +1,4 @@
-gen-formula
+gen-symbol.lisp
 
 1. 発生分布を指定して記号を発生する
  1) 関数、述語、0引数記号の3つにわけて記号リストを持つ
@@ -41,4 +41,20 @@ gen-formula
      nargdef, distdef, 0argdef
 
 
-　　　
+gen-term.lisp
+  generate term
+
+  1. depth
+    depth=0になったら、*0symacc* からシンボルをとる
+
+　2. (gen-term depth)
+    *funacc*から関数名Fをとる
+　　Fのnargs(*fundef*)が0なら定数なので引数は作らない
+　　Fのnargs(*fundef*)が0より大きいなら、引数を作る。
+　　　このときdepthを-1 する。
+
+  3. (gen-term* nargs depth)
+    nargs個のtermのリストを生成する。
+
+
+
