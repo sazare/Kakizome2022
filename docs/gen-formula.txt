@@ -57,4 +57,10 @@ gen-term.lisp
     nargs個のtermのリストを生成する。
 
 
+  4. (gen-atomic psym depth)
+      *predef*参照
+      atomicを生成する。ただし、psymを使用する。
+
+  5. (nargsof sym def)
+　　　defを参照してsymのnargsを求める
 

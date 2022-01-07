@@ -18,7 +18,7 @@
   (if (> depth 0)
     (let (fsym nargs)
       (setq fsym (choose-symbol *funacc*))
-      (setq nargs (cadr (assoc fsym (append *0symdef* *fundef*))))
+      (setq nargs (nargsof fsym (append *0symdef* *fundef*)))
 
       (if (> nargs  0)
         (cons fsym (gen-term* nargs (- depth 1)))
@@ -29,5 +29,13 @@
   )
 )
 
+
+(defun gen-atomic (psym depth)
+  "generate an atomic with psym"
+  (if (> depth 0)
+    (cons psym (gen-term* (nargsof psym *predef*) (- depth 1)))
+    (list psym)
+  )
+)
 
 

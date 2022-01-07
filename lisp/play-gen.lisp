@@ -20,3 +20,5 @@
 (load "gen-term.lisp")
 (gen-term 15)
 
+(gen-atomic 'p1 3)
+

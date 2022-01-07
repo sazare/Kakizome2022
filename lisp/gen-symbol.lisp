@@ -17,6 +17,9 @@
   )
 )
 
+(defun nargsof (sym def)
+  (cadr (assoc sym def))
+) 
 
 (defun choose-symbol (acc) 
   "choose a symbol from acc"
