@@ -1,0 +1,31 @@
+1. package
+ genexp-package.lispに定義を書く
+ ここにはin-packageは含めなかった
+ play-gen.lispでコメントになっている。
+ (load "genexp-package.lisp)はコメントはずしていたので
+ (load "play-gen.lisp") の中にこれとin-packageの行がはいっていた。
+ また、
+ gen-term.lisp, gen-symbol.lispに(in-package)を入れる
+ package.lispはload-systemでloadされるので、ここでは手でloadする前提
+
+新しいsbclで
+ (load "genexp-package.lisp")
+ (in-package :genexp)
+ (load "play-gen.lisp") --- このファイルに*fundef*などがはいっているのでテスト用
+ (gen-atomic 'p1 4)
+ などの動作確認
+
+2. system
+ genexp.asdを定義する
+ このファイルを ~/.common-lisp/にlnする(-s)
+ これだとln先が変わったら困るので、.common-lispのほうに本体をおくような運用が必要。
+
+ play-gen.lispから(load "genexp-package.lisp")の行をはずし(adfに含めているから)
+
+ sbcl起動して
+　(asdf:load-system :genexp)
+  (in-package :genexp)
+  (gen-atomic 'p 10)
+
+　などとする
+  

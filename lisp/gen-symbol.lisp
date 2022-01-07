@@ -1,5 +1,7 @@
 ;;; a sample code for gen-symbol
 
+(in-package :genexp)
+
 ; sample
 ; (defparameter *fundef* '((f1 3 3)(f2 1 6)(f3 4 1)))
 ; (defparameter *predef* '((p1 1 5)(p2 2 3)(p3 3 1)(p4 4 1)))

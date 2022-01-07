@@ -1,6 +1,7 @@
 ;; gen-term.lisp
 ;; generate terms
 
+(in-package :genexp)
 
 (defun gen-term* (nargs depth)
   "generate term*. assure nargs ~= 0"

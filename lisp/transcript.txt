@@ -1,0 +1,22 @@
+shin@Chapterhouse lisp % sbcl
+This is SBCL 2.1.9, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+CL-USER(1): (asdf:load-system :genexp)
+
+T
+CL-USER(2): (load "play-gen.lisp")
+
+T
+CL-USER(3): (in-package genexp)
+
+#<PACKAGE "GENEXP">
+GENEXP(4): (gen-atomic 'p3 5)
+
+(P3 B (F1 A (F2 (F2 X)) (F2 (F2 (F3 X)))) X)
+GENEXP(5):
+
