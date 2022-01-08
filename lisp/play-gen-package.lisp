@@ -1,14 +1,10 @@
 ;; play code for genexp
 
-;(load "genexp-package.lisp")
-;(in-package :genexp)
-
-(asdf:load-system :genexp)
-
+(load "genexp-package.lisp")
 (in-package :genexp)
 
 ;; for gen-symbol
-;(load "gen-symbol.lisp")
+(load "gen-symbol.lisp")
 
 (defparameter acc1 (make-acc '((p 2 5)(q 1 20)(r 3 5))))
 
@@ -23,7 +19,8 @@
 (defparameter *preacc* (make-acc *predef*))
 (defparameter *0symacc* (make-acc *0symdef*))
 
-;(load "gen-term.lisp")
+(load "gen-term.lisp")
+
 (gen-term 15)
 
 (gen-atomic 'p1 3)
